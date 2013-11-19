@@ -1,0 +1,29 @@
+{
+  "name": "Shift.js",
+  "version": "0.1.0",
+  "description": "Use the shift key to select a range of elements, such as checkboxes and radio buttons.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wildhoney/Shift.js.git"
+  },
+  "keywords": [
+    "shift",
+    "\"shift",
+    "key\"",
+    "\"shift",
+    "checkboxes\"",
+    "checkboxes"
+  ],
+  "author": "Adam Timberlake <adam.timberlake@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Wildhoney/Shift.js/issues"
+  }
+}
