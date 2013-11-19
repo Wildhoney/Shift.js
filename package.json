@@ -25,5 +25,8 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Wildhoney/Shift.js/issues"
+  },
+  "dependencies": {
+    "jshint": "~2.3.0"
   }
 }
