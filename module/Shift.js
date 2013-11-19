@@ -1,4 +1,6 @@
-!(function($window) {
+(function($window) {
+
+    "use strict";
 
     /**
      * @module Shift
@@ -11,8 +13,10 @@
      */
     $window.Shift = function() {
 
-        var _fillGaps   = this._fillGaps,
-            scope       = this,
+        var scope       = this,
+            _fillGaps   = function() {
+                scope._fillGaps.call(scope, this);
+            },
             nodes       = this._getNodesByGroupName();
 
         /**
@@ -20,7 +24,7 @@
          * @param event {Object}
          */
         $window.document.onkeyup = function(event) {
-            scope._shiftDown = false;
+            scope._shiftDown = event.shiftKey;
         };
 
         /**
@@ -36,9 +40,7 @@
 
             var node = nodes[index];
 
-            node.onclick = function() {
-                _fillGaps.call(scope, this);
-            };
+            node.onclick = _fillGaps;
 
         }
 
@@ -72,7 +74,7 @@
          * @return {NodeList}
          * @private
          */
-        _getNodesByGroupName: function _getNodesByGroupName(name) {
+        _getNodesByGroupName: function _getNodesByGroupName() {
             return $window.document.querySelectorAll('*[data-shift-group]');
         },
 

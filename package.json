@@ -1,5 +1,6 @@
 {
-  "name": "Shift.js",
+  "name": "shift-js",
+  "buildName": "shift",
   "version": "0.1.0",
   "description": "Use the shift key to select a range of elements, such as checkboxes and radio buttons.",
   "main": "index.js",
@@ -27,6 +28,8 @@
     "url": "https://github.com/Wildhoney/Shift.js/issues"
   },
   "dependencies": {
-    "jshint": "~2.3.0"
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-jshint": "~0.7.2"
   }
 }
