@@ -111,7 +111,6 @@
 
                 if (highlight) {
                     // Set the `checked` property to that of the first clicked node.
-//                    node.checked = lastNode.checked;
                     node.checked = this._firstNode.checked;
                 }
 
