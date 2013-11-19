@@ -9,6 +9,8 @@ Use the shift key to select a range of elements, such as checkboxes and radio bu
 
 Mimics Gmail's checkbox filter where you hold down the shift key to select ranges.
 
+**Install with npm:** `npm install shift-js`.
+
 Getting Started
 --------
 
