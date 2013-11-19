@@ -13,3 +13,5 @@ Getting Started
 --------
 
 Simply add the `data-shift-group` attribute to each checkbox you wish to be part of the group &ndash; set the attribute to a unique group name for your checkbox collection.
+
+Once you've setup your DOM, you simply need to instantiate Shift.js (`new Shift();`) on the `DOMContentLoaded`/`$(document)` event.
