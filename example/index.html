@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+
+    <script type="text/javascript"src="../module/Shift.js"></script>
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', function() {
+            new Shift();
+        });
+
+    </script>
+
+</head>
+<body>
+
+    Try holding down the shift key whilst selecting a range of checkboxes.
+
+    <form>
+        <ul>
+            <li><input type="checkbox" value="sugar" data-shift-group="my-checkboxes" /> Sugar</li>
+            <li><input type="checkbox" value="and" data-shift-group="my-checkboxes" /> and</li>
+            <li><input type="checkbox" value="spice" data-shift-group="my-checkboxes" /> Spice</li>
+            <li><input type="checkbox" value="and" data-shift-group="my-checkboxes" /> and</li>
+            <li><input type="checkbox" value="all" data-shift-group="my-checkboxes" /> all</li>
+            <li><input type="checkbox" value="things" data-shift-group="my-checkboxes" /> things</li>
+            <li><input type="checkbox" value="nice" data-shift-group="my-checkboxes" /> Nice!</li>
+        </ul>
+    </form>
+
+</body>
+</html>
