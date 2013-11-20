@@ -70,12 +70,18 @@
 
         /**
          * @method _getNodesByGroupName
-         * @param name {String}
+         * @param groupName {String}
          * @return {NodeList}
          * @private
          */
-        _getNodesByGroupName: function _getNodesByGroupName() {
-            return $window.document.querySelectorAll('*[data-shift-group]');
+        _getNodesByGroupName: function _getNodesByGroupName(groupName) {
+
+            if (!groupName) {
+                return $window.document.querySelectorAll('*[data-shift-group]');
+            }
+
+            return $window.document.querySelectorAll('*[data-shift-group="' + groupName + '"]');
+
         },
 
         /**
@@ -94,7 +100,19 @@
 
             }
 
-            var nodes       = this._getNodesByGroupName(),
+            var firstGroupName  = this._firstNode.getAttribute('data-shift-group'),
+                lastGroupName   = lastNode.getAttribute('data-shift-group'),
+                sameGroupNames  = (firstGroupName === lastGroupName);
+
+            if (!sameGroupNames) {
+
+                // Group names aren't the same so we've not got an actual range.
+                this._firstNode = lastNode;
+                return;
+
+            }
+
+            var nodes       = this._getNodesByGroupName(lastGroupName),
                 highlight   = false;
 
             // Iterate over each node to determine whether it should be filled in or not. We stop and start
