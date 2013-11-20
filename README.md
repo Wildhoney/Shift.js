@@ -16,6 +16,18 @@ Mimics Gmail's checkbox filter where you hold down the shift key to select range
 Getting Started
 --------
 
-Simply add the `data-shift-group` attribute to each checkbox you wish to be part of the group &ndash; set the attribute to a unique group name for your checkbox collection.
+Shift requires the adding of an attribute to each checkbox to specify its group. With this you can specify unique groups for your collection of checkboxes &ndash; allowing you to have multiple checkbox collections per page.
 
-Once you've setup your DOM, you simply need to instantiate Shift.js (`new Shift();`) on the `DOMContentLoaded`/`$(document)` event.
+```html
+<input type="checkbox" data-shift-group="groupOne" />
+<input type="checkbox" data-shift-group="groupOne" />
+<input type="checkbox" data-shift-group="groupOne" />
+
+<input type="checkbox" data-shift-group="groupTwo" />
+<input type="checkbox" data-shift-group="groupTwo" />
+<input type="checkbox" data-shift-group="groupTwo" />
+```
+
+Setting up two unique groups (`groupOne` and `groupTwo`) allows both to act independently of one another. If you intersperse the checkboxes then it tends to make more sense &ndash; because checkboxes of another group will be let well alone.
+
+Once you've setup your DOM there is nothing else to do &ndash; Shift will setup the behaviour automatically!

@@ -37,11 +37,8 @@
 
         // Iterate over each discovered node to attach the event.
         for (var index = 0, maxNodes = nodes.length; index < maxNodes; index++) {
-
-            var node = nodes[index];
-
-            node.onclick = _fillGaps;
-
+            var node        = nodes[index];
+            node.onclick    = _fillGaps;
         }
 
     };
@@ -139,5 +136,9 @@
         }
 
     };
+
+    $window.document.addEventListener('DOMContentLoaded', function() {
+        new Shift();
+    });
 
 })(window);
