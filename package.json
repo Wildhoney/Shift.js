@@ -1,7 +1,7 @@
 {
   "name": "shift-js",
   "buildName": "shift",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Use the shift key to select a range of elements, such as checkboxes and radio buttons.",
   "main": "index.js",
   "directories": {
